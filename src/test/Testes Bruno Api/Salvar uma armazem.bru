@@ -1,0 +1,24 @@
+meta {
+  name: Salvar uma armazem
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/api/v1/warehouse
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Shopee",
+    "address": {
+    "id": "0cd6a450-d840-400d-9761-516d2d0bc7c9"
+  }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
