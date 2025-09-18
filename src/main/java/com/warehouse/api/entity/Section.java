@@ -11,6 +11,8 @@ public class Section {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "UUID")
     @Column(nullable = false, updatable = false)
     private UUID id;
+    @Column(nullable = false, updatable = false)
+    private String code;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "warehouse_id")
@@ -21,8 +23,9 @@ public class Section {
 
     }
 
-    public Section(UUID id, Warehouse warehouse) {
+    public Section(UUID id, String code, Warehouse warehouse) {
         this.id = id;
+        this.code = code;
         this.warehouse = warehouse;
     }
 
@@ -32,6 +35,14 @@ public class Section {
 
     public void setId(UUID id) {
         this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public Warehouse getWarehouse() {
