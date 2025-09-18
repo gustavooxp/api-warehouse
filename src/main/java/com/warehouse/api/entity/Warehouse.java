@@ -25,7 +25,7 @@ public class Warehouse {
 
     }
 
-    public Warehouse(UUID id, Address address, Set<Section> sections) {
+    public Warehouse(UUID id, Address address) {
         this.id = id;
         this.address = address;
         this.sections = sections;

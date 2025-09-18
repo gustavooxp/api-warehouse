@@ -21,11 +21,10 @@ public class Address {
     public Address (){
     }
 
-    public Address(UUID id, String street, String city, Warehouse warehouse) {
+    public Address(UUID id, String street, String city) {
         this.id = id;
         this.street = street;
         this.city = city;
-        this.warehouse = warehouse;
     }
 
     public UUID getId() {

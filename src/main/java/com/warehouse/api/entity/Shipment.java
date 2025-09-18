@@ -14,7 +14,7 @@ public class Shipment {
     @Column(nullable = false, updatable = false)
     private UUID id;
     @Column(nullable = false,updatable = false)
-    private String status;
+    private ShipmentEnum status;
 
     @ManyToMany
     @JoinTable(name = "shipment_products", joinColumns = @JoinColumn(name = "shipment_id"),
@@ -25,7 +25,7 @@ public class Shipment {
 
     }
 
-    public Shipment(UUID id, String status, Set<Product> products) {
+    public Shipment(UUID id, ShipmentEnum status, Set<Product> products) {
         this.id = id;
         this.status = status;
         this.products = products;
@@ -39,11 +39,11 @@ public class Shipment {
         this.id = id;
     }
 
-    public String getStatus() {
+    public ShipmentEnum getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(ShipmentEnum status) {
         this.status = status;
     }
 

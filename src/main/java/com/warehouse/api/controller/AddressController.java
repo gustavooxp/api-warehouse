@@ -1,8 +1,8 @@
 package com.warehouse.api.controller;
 
-import com.warehouse.api.dto.ProductCreateDTO;
 import com.warehouse.api.dto.AddressCreateDTO;
-import com.warehouse.api.service.ProductService;
+import com.warehouse.api.dto.AddressCreateDTO;
+import com.warehouse.api.service.AddressService;
 import com.warehouse.api.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
