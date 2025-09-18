@@ -8,6 +8,7 @@ import java.util.Set;
 
 public class WarehouseCreateDTO {
 
+    private String name;
     private Address address;
     private Set<Section> sections = new HashSet<>();
 
@@ -15,9 +16,16 @@ public class WarehouseCreateDTO {
 
     }
 
-    public WarehouseCreateDTO(Address address, Set<Section> sections) {
+    public WarehouseCreateDTO(String name, Address address) {
         this.address = address;
-        this.sections = sections;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Address getAddress() {
@@ -26,13 +34,5 @@ public class WarehouseCreateDTO {
 
     public void setAddress(Address address) {
         this.address = address;
-    }
-
-    public Set<Section> getSections() {
-        return sections;
-    }
-
-    public void setSections(Set<Section> sections) {
-        this.sections = sections;
     }
 }

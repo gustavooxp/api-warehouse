@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class ShipmentCreateDTO {
 
-    private String status;
+    private ShipmentEnum status;
     private Set<Product> products = new HashSet<>();
 
     public ShipmentCreateDTO(){
@@ -20,11 +20,11 @@ public class ShipmentCreateDTO {
         this.products = products;
     }
 
-    public String getStatus() {
+    public ShipmentEnum getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(ShipmentEnum status) {
         this.status = status;
     }
 

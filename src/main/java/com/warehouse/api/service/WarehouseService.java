@@ -58,16 +58,16 @@ public WarehouseCreateDTO update(UUID id, WarehouseCreateDTO warehouseCreateDTO)
     public WarehouseCreateDTO convertToDto(Warehouse warehouse) {
         WarehouseCreateDTO warehouseCreateDTO = new WarehouseCreateDTO();
 //        get the warehouse data and pass it to warehouseCreateDto
+        warehouseCreateDTO.setName(warehouse.getName());
         warehouseCreateDTO.setAddress(warehouse.getAddress());
-        warehouseCreateDTO.setSections(warehouse.getSections());
         return warehouseCreateDTO;
     }
 
     public Warehouse convertToEntity(WarehouseCreateDTO warehouseCreateDTO) {
         Warehouse warehouse = new Warehouse();
 //        get the warehouseCreateDto data and pass it to warehouse
+        warehouse.setName(warehouseCreateDTO.getName());
         warehouse.setAddress(warehouseCreateDTO.getAddress());
-        warehouse.setSections(warehouseCreateDTO.getSections());
         return warehouse;
     }
 

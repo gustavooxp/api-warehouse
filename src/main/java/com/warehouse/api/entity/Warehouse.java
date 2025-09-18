@@ -13,6 +13,8 @@ public class Warehouse {
     @GeneratedValue (strategy = GenerationType.AUTO, generator = "UUID")
     @Column(nullable = false, updatable = false)
     private UUID id;
+    @Column(nullable = false, updatable = false)
+    private String name;
 
     @OneToOne
     @JoinColumn(name = "address_id")
@@ -25,10 +27,10 @@ public class Warehouse {
 
     }
 
-    public Warehouse(UUID id, Address address) {
+    public Warehouse(UUID id,String name, Address address) {
         this.id = id;
+        this.name = name;
         this.address = address;
-        this.sections = sections;
     }
 
     public UUID getId() {
@@ -39,19 +41,19 @@ public class Warehouse {
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Address getAddress() {
         return address;
     }
 
     public void setAddress(Address address) {
         this.address = address;
-    }
-
-    public Set<Section> getSections() {
-        return sections;
-    }
-
-    public void setSections(Set<Section> sections) {
-        this.sections = sections;
     }
 }

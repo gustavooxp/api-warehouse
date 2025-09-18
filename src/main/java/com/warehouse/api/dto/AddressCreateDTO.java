@@ -13,10 +13,9 @@ public class AddressCreateDTO {
 
     }
 
-    public AddressCreateDTO(String street, String city, Warehouse warehouse) {
+    public AddressCreateDTO(String street, String city) {
         this.street = street;
         this.city = city;
-        this.warehouse = warehouse;
     }
 
     public String getStreet() {
@@ -35,13 +34,6 @@ public class AddressCreateDTO {
         this.city = city;
     }
 
-    public Warehouse getWarehouse() {
-        return warehouse;
-    }
-
-    public void setWarehouse(Warehouse warehouse) {
-        this.warehouse = warehouse;
-    }
 }
 
 

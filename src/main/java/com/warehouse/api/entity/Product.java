@@ -25,11 +25,10 @@ public class Product {
 
     }
 
-    public Product(UUID id, String sku, String name, Set<Shipment> shipments) {
+    public Product(UUID id, String sku, String name) {
         this.id = id;
         this.sku = sku;
         this.name = name;
-        this.shipments = shipments;
     }
 
     public UUID getId() {
@@ -56,11 +55,4 @@ public class Product {
         this.name = name;
     }
 
-    public Set<Shipment> getShipments() {
-        return shipments;
-    }
-
-    public void setShipments(Set<Shipment> shipments) {
-        this.shipments = shipments;
-    }
 }

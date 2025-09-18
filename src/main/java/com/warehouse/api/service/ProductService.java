@@ -20,7 +20,6 @@ public class ProductService {
         ProductCreateDTO productCreateDTO = new ProductCreateDTO();
 //        get the product data and pass it to productCreateDto
         productCreateDTO.setName(product.getName());
-        productCreateDTO.setShipments(product.getShipments());
         productCreateDTO.setSku(product.getSku());
         return productCreateDTO;
     }
@@ -29,7 +28,6 @@ public class ProductService {
         Product product = new Product();
 //        get to productCreateDto data and pass it to product
         product.setName(productCreateDTO.getName());
-        product.setShipments(productCreateDTO.getShipments());
         product.setSku(productCreateDTO.getSku());
         return product;
     }

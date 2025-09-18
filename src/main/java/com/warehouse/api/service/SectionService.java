@@ -20,14 +20,12 @@ public class SectionService {
     public SectionCreateDTO convertToDto(Section section) {
         SectionCreateDTO sectionCreateDTO = new SectionCreateDTO();
 //        get the section data and pass it to sectionCreateDto
-        sectionCreateDTO.setWarehouse(section.getWarehouse());
         return sectionCreateDTO;
     }
 
     public Section convertToEntity(SectionCreateDTO sectionCreateDTO) {
         Section section = new Section();
 //        get the sectionCreateDto data and pass it to section
-        section.setWarehouse(sectionCreateDTO.getWarehouse());
         return section;
     }
 

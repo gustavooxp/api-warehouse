@@ -15,10 +15,9 @@ public class ProductCreateDTO {
 
     }
 
-    public ProductCreateDTO(String sku, String name, Set<Shipment> shipments) {
+    public ProductCreateDTO(String sku, String name) {
         this.sku = sku;
         this.name = name;
-        this.shipments = shipments;
     }
 
     public String getSku() {
@@ -37,11 +36,4 @@ public class ProductCreateDTO {
         this.name = name;
     }
 
-    public Set<Shipment> getShipments() {
-        return shipments;
-    }
-
-    public void setShipments(Set<Shipment> shipments) {
-        this.shipments = shipments;
-    }
 }

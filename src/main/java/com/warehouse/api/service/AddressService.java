@@ -23,7 +23,6 @@ public class AddressService {
         AddressCreateDTO addressCreateDTO = new AddressCreateDTO();
 //        get the address data and pass it to addressCreateDto
         addressCreateDTO.setCity(address.getCity());
-        addressCreateDTO.setWarehouse(address.getWarehouse());
         addressCreateDTO.setStreet(address.getStreet());
         return addressCreateDTO;
     }
@@ -32,7 +31,6 @@ public class AddressService {
         Address address = new Address();
 //        get to addressCreateDto data and pass it to address
         address.setCity(addressCreateDTO.getCity());
-        address.setWarehouse(addressCreateDTO.getWarehouse());
         address.setStreet(addressCreateDTO.getStreet());
         return address;
     }
@@ -47,6 +45,7 @@ public class AddressService {
 
     //    method save a address
     public AddressCreateDTO save(AddressCreateDTO addressCreateDTO) {
+        System.out.println(addressCreateDTO);
         Address address = convertToEntity(addressCreateDTO);
         address = addressRepository.save(address);
         return convertToDto(address);
